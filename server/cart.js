@@ -1,4 +1,4 @@
-let data = require("./cart.json");
+let data = require('./cart.json');
 
 const getCartData = () => {
   return data;
@@ -22,33 +22,33 @@ const updateCartData = (currentCartItem) => {
     data = { ...data, productsInCart };
     return {
       data,
-      status: "success",
-      messgae: "Shopping cart updated sussfully",
+      status: 'success',
+      messgae: 'Shopping cart updated sussfully',
     };
   } catch (error) {
     return {
       data: updatedCartData,
-      status: "fail",
+      status: 'fail',
       messgae: error,
     };
   }
 };
 
 const deleteCartData = (itemId) => {
-  console.log("deleteCartData itemId");
+  console.log('deleteCartData itemId');
   console.log(itemId);
   let updatedCartData = data;
   try {
     updatedCartData = data.filter((cartItem) => cartItem.p_id !== itemId);
     return {
       data: updatedCartData,
-      status: "success",
+      status: 'success',
       messgae: `${itemId} deleted successfully!`,
     };
   } catch (error) {
     return {
       data: updatedCartData,
-      status: "fail",
+      status: 'fail',
       messgae: error,
     };
   }

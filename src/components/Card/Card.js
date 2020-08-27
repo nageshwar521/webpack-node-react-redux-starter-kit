@@ -1,21 +1,16 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import {
-  Card as CardComponent,
-  CardHeader,
-  CardActions,
-  CardContent
-} from "@material-ui/core";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Card as CardComponent, CardHeader, CardActions, CardContent } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   stepper: {
-    flex: 1
+    flex: 1,
   },
   cardActions: { padding: 0 },
-  cardContent: { borderTop: "1px solid #DDD", padding: "0 20px 20px 20px" }
+  cardContent: { borderTop: '1px solid #DDD', padding: '0 20px 20px 20px' },
 }));
 
 const Card = ({ title, subtitle, children, getFooter, cardContentClass }) => {
@@ -26,14 +21,12 @@ const Card = ({ title, subtitle, children, getFooter, cardContentClass }) => {
       <CardHeader title={title} subheader={subtitle} />
       <CardContent
         classes={{
-          root: cardContentClass ? cardContentClass : classes.cardContent
+          root: cardContentClass ? cardContentClass : classes.cardContent,
         }}
       >
         {children}
       </CardContent>
-      <CardActions classes={{ root: classes.cardActions }}>
-        {getFooter && getFooter()}
-      </CardActions>
+      <CardActions classes={{ root: classes.cardActions }}>{getFooter && getFooter()}</CardActions>
     </CardComponent>
   );
 };

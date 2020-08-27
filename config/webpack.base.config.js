@@ -20,7 +20,12 @@ module.exports = (env) => {
             test: /\.(js|jsx)$/,
             exclude: /node_modules/,
             use: {
-              loader: "babel-loader",
+              loader: 'babel-loader',
+              options: {
+                  presets: [
+                      "@babel/preset-env", "@babel/preset-react"
+                  ]
+              }
             },
           },
           {
@@ -75,6 +80,15 @@ module.exports = (env) => {
       resolve: {
         alias: {
           images: path.resolve(__dirname, "../src/assets/images/"),
+          "@root": path.resolve(__dirname, "../"),
+          "@src": path.resolve(__dirname, "../src/"),
+          "@locale": path.resolve(__dirname, "../src/locale/"),
+          "@pages": path.resolve(__dirname, "../src/pages/"),
+          "@components": path.resolve(__dirname, "../src/components/"),
+          "@config": path.resolve(__dirname, "../src/config/"),
+          "@services": path.resolve(__dirname, "../src/services/"),
+          "@common": path.resolve(__dirname, "../src/common/"),
+          "@redux": path.resolve(__dirname, "../src/redux/"),
         },
         extensions: [".js", ".jsx", ".css", ".png", ".jpg", ".gif", ".jpeg"],
       },

@@ -1,3 +1,2 @@
-import actions from "./actions";
-
-export default actions;
+import authActions from './authActions';
+export { authActions };

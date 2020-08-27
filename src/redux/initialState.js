@@ -1,0 +1,17 @@
+export const initialState = {
+  users: [],
+  status: 'initial',
+  createUserError: null,
+  createUserSuccess: null,
+  loginSuccess: null,
+  loginError: null,
+  verificationUserSuccess: null,
+  verificationUserError: null,
+  resetPasswordSuccess: null,
+  resetPasswordError: null,
+  checkEmailExistSuccess: null,
+  checkEmailExistError: null,
+  getUserSuccess: null,
+  getUserError: null,
+  userDetails: null,
+};
