@@ -23,7 +23,6 @@ import AuthHeader from '../_common/AuthHeader';
 import EmailField from '@components/Form/EmailField';
 import PasswordField from '@components/Form/PasswordField';
 import InputField from '@components/Form/InputField';
-import { register, resetState } from '@redux/actions/authActions';
 import { validateForm } from '../utils';
 
 export default function SignUp() {

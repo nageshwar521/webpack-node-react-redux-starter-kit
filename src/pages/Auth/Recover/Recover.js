@@ -9,7 +9,6 @@ import AuthContent from '../_common/AuthContent';
 import AuthHeader from '../_common/AuthHeader';
 import EmailField from '@components/Form/EmailField';
 import ErrorContainer from '@pages/Auth/ErrorContainer';
-import { checkEmailExist, resetState } from '@redux/actions/authActions';
 import { validateForm } from '../utils';
 import AlertMessage from '@components/AlertMessage';
 
@@ -17,9 +16,7 @@ export default function Login() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const history = useHistory();
-  const { status, checkEmailExistSuccess, checkEmailExistError } = useSelector(
-    (store) => store.auth,
-  );
+  const { status } = useSelector((store) => store.auth);
   const defaultEmail = {
     email: '',
   };

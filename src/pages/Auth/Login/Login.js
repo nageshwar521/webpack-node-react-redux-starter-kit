@@ -17,21 +17,14 @@ import AuthContent from '../_common/AuthContent';
 import EmailField from '@components/Form/EmailField';
 import PasswordField from '@components/Form/PasswordField';
 import ErrorContainer from '@pages/Auth/ErrorContainer';
-import { login, resetState } from '@redux/actions/authActions';
-import { validateForm } from '../utils';
 import AlertMessage from '@components/AlertMessage';
 
 export default function Login() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const history = useHistory();
-  const {
-    status,
-    loginSuccess,
-    loginError,
-    createUserSuccess,
-    verificationUserSuccess,
-  } = useSelector((store) => store.auth);
+  const { status, loginSuccess, loginError, createUserSuccess, verificationUserSuccess } =
+    useSelector((store) => store.auth);
   const currentUser = {
     email: '',
     password: '',

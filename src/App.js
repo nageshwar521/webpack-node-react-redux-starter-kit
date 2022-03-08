@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
-import store from './redux/store';
 import './App.scss';
 import Routes from './routes/Routes';
 import theme from './themes/theme';
-import config from './config';
+import config from './utils/config';
+import store from './store/store';
 
 const AppRouterComponent = config.navigationType === 'history' ? BrowserRouter : HashRouter;
 

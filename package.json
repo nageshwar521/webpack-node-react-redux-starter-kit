@@ -25,6 +25,7 @@
     "chance": "^1.1.4",
     "classnames": "^2.2.6",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "dotenv-webpack": "^2.0.0",
     "express": "^4.17.1",
     "faker": "^4.1.0",
@@ -90,5 +91,10 @@
     "webpack-dev-server": "^3.2.0",
     "webpack-merge": "^4.1.4",
     "webpack-visualizer-plugin": "^0.1.11"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }

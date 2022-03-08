@@ -8,7 +8,6 @@ import AuthContent from '../_common/AuthContent';
 import AuthHeader from '../_common/AuthHeader';
 import PasswordField from '@components/Form/PasswordField';
 import ErrorContainer from '@pages/Auth/ErrorContainer';
-import { resetPassword, resetState } from '@redux/actions/authActions';
 import { validateForm, getTokenFromUrl } from '../utils';
 import AlertMessage from '@components/AlertMessage';
 

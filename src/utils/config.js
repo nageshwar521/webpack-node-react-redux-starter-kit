@@ -1,6 +1,4 @@
-const baseUrl = process.env.REACT_APP_API_URL || 'https://test.worklobster.com/api/v1';
-console.log('baseUrl');
-console.log(baseUrl);
+const baseUrl = process.env.REACT_APP_API_URL;
 
 const config = {
   api: {
@@ -13,5 +11,7 @@ const config = {
   },
   navigationType: 'hash',
 };
+
+export const apiBaseUrl = baseUrl;
 
 export default config;

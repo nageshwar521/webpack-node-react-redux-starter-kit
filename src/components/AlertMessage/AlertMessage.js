@@ -1,7 +1,6 @@
 import React from 'react';
 import Alert from '@material-ui/lab/Alert';
 import { useDispatch } from 'react-redux';
-import { resetState } from '@redux/actions/authActions';
 
 const AlertMessage = ({
   type = 'success',
@@ -14,7 +13,6 @@ const AlertMessage = ({
   React.useEffect(() => {
     const timeout = setTimeout(() => {
       if (reduxField) {
-        dispatch(resetState({ [reduxField]: null }));
       } else {
         if (onReset) {
           onReset();
